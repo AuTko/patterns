@@ -4,6 +4,10 @@ import AbstractFactory.M16Factory.M16Factory;
 import AbstractFactory.Weapon;
 import AbstractFactory.WeaponFactory;
 import Facade.Facade;
+import FactoryMethod.AbstractWeaponFactory;
+import FactoryMethod.AkFactory;
+import FactoryMethod.HKFactory;
+
 
 import java.util.ArrayList;
 
@@ -18,13 +22,23 @@ public class Main {
 
         //Abstract Fabric
 
-        WeaponFactory firstFactory = new AKFactory();
+       /* WeaponFactory firstFactory = new AKFactory();
         Weapon firstWeapon = firstFactory.getWeapon();
         ArrayList<Bullet> firstBullets = firstFactory.getBullets();
 
         WeaponFactory secFactory = new M16Factory();
         Weapon secWeapon = secFactory.getWeapon();
-        ArrayList<Bullet> secBullets = secFactory.getBullets();
+        ArrayList<Bullet> secBullets = secFactory.getBullets();*/
+
+        //Factory Method
+
+        AbstractWeaponFactory firstFactory = new AkFactory();
+        firstFactory.getWeapon();
+        AbstractWeaponFactory secFactory = new HKFactory();
+        secFactory.getWeapon();
+
+
+
 
 
 
